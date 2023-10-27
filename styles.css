@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Blue: hsl(246, 80%, 60%);
+
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  /* border: 1px solid black; */
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+ 
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 2rem auto;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.769);
+}
+
+.blue {
+  background-color: var(--Blue);
+}
+.orange {
+  background-color: var(--Light-red-work);
+}
+.soft-blue {
+  background-color: var(--Soft-blue-play);
+}
+.red {
+  background-color: var(--Light-red-study);
+}
+
+.green {
+  background-color: var(--Lime-green-exercise);
+}
+.violet {
+  background-color: var(--Violet-social);
+}
+.yellow {
+  background-color: var(--Soft-orange-self-care);
+}
+
+.grid__container {
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+.icons {
+  position: absolute;
+  width: 70px;
+  right: 10px;
+  top: -10px;
+}
+.grid__subcontainer {
+  background-color: var(--Dark-blue);
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  bottom: 0px;
+  padding: 20px;
+}
+
+.grid__subcontainer:hover {
+  cursor: pointer;
+  background-color: hsl(236, 37%, 48%);
+}
+.down {
+  background-color: var(--Dark-blue);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 180px;
+  max-width: 300px;
+}
+.blue {
+  background-color: var(--Blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.avatar {
+  width: 60px;
+  border: 2px solid white;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.info__user,
+.user__data,
+.frequency__selector {
+  display: flex;
+}
+
+.info__user {
+  width: 100%;
+  align-items: center;
+}
+.user__data {
+  flex-direction: column;
+  line-height: 25px;
+}
+.user__data--name {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.841);
+}
+
+.user__data--report,
+.last-frequency,
+a {
+  color: rgba(255, 255, 255, 0.577);
+  
+}
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  outline: none;
+}
+
+.activity__display--daily,
+.activity__display--monthly {
+  display: none;
+}
+
+.frequency__selector {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container__header--activity,
+.container__frequency {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.frequency {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+.last-frequency {
+  font-size: 0.9rem;
+}
+.down:hover{
+    cursor: unset;
+    background-color: var(--Dark-blue);
+}
+
+@media (min-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 15rem));
+    grid-auto-rows: 13rem;
+    max-width: 1200px;
+    padding: 0 50px;
+  }
+  .down {
+    height: 100%;
+    width: 100%;
+    grid-row: 1/3;
+  }
+  .down:hover{
+    background-color: var(--Dark-blue);
+  }
+
+  .grid__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info__user {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 170px;
+  }
+  .avatar {
+    margin-bottom: 30px;
+  }
+  .user__data--name {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+  .container__frequency {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .frequency {
+    font-size: 3rem;
+  }
+  .frequency__selector {
+    flex-direction: column;
+    line-height: 40px;
+    width: unset;
+    cursor: unset;
+  }
+  .blue {
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

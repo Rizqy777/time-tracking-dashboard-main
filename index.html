@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="grid__subcontainer down">
+        <div class="frequency__selector">
+          <a href="#" class="frequency__selector--daily" id="daily_selector"
+            >Daily</a
+          >
+          <a href="#" class="frequency__selector--weekly" id="weekly_selector"
+            >Weekly</a
+          >
+          <a href="#" class="frequency__selector--monthly" id="monthly_selector"
+            >Monthly</a
+          >
+        </div>
+        <div class="grid__container blue">
+          <div class="info__user">
+            <img
+              src="images/image-jeremy.png"
+              alt="avatar-jeremy"
+              class="avatar"
+            />
+            <div class="user__data">
+              <span class="user__data--report">Report for</span>
+              <span class="user__data--name"> Jeremy Robson</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid__container orange">
+        <img src="images/icon-work.svg" alt="icon_work" class="icons" />
+        <div class="grid__subcontainer">
+          <div class="container__header--activity">
+            <span class="activity">Work</span>
+            <img
+              src="images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="ellisis"
+            />
+          </div>
+          <div class="activity__display--daily" id="display_daily">
+            <div class="container__frequency">
+              <span class="frequency">5hrs</span>
+              <!-- daily -->
+              <span class="last-frequency"> Previous - 7hrs</span>
+              <!-- daily -->
+            </div>
+          </div>
+          <div class="activity__display--weekly" id="display_weekly">
+            <div class="container__frequency">
+              <span class="frequency">32hrs</span>
+              <!-- weekly -->
+              <span class="last-frequency">Previous - 36hrs</span>
+              <!-- weekly -->
+            </div>
+          </div>
+          <div class="activity__display--monthly" id="display_monthly">
+            <div class="container__frequency">
+              <span class="frequency"> 103hrs</span>
+              <!-- monthly -->
+              <span class="last-frequency">Previous - 128hrs</span>
+              <!-- monthly -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__container soft-blue">
+        <img src="images/icon-play.svg" alt="icon_play" class="icons" />
+        <div class="grid__subcontainer">
+          <div class="container__header--activity">
+            <span class="activity">Play</span>
+            <img
+              src="images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="ellisis"
+            />
+          </div>
+          <div class="activity__display--daily" id="display_daily">
+            <div class="container__frequency">
+              <span class="frequency">1hr</span>
+              <!-- daily -->
+              <span class="last-frequency">Previous - 2hrs</span>
+              <!-- daily -->
+            </div>
+          </div>
+          <div class="activity__display--weekly" id="display_weekly">
+            <div class="container__frequency">
+              <span class="frequency">10hrs</span>
+              <!-- weekly -->
+              <span class="last-frequency">Previous - 8hrs</span>
+              <!-- weekly -->
+            </div>
+          </div>
+          <div class="activity__display--monthly" id="display_monthly">
+            <div class="container__frequency">
+              <span class="frequency">23hrs</span>
+              <!-- monthly -->
+              <span class="last-frequency">Previous - 29hrs</span>
+              <!-- monthly -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid__container red">
+        <img src="images/icon-study.svg" alt="icon_study" class="icons" />
+        <div class="grid__subcontainer">
+          <div class="container__header--activity">
+            <span class="activity">Study</span>
+            <img
+              src="images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="ellisis"
+            />
+          </div>
+          <div class="activity__display--daily" id="display_daily">
+            <div class="container__frequency">
+              <span class="frequency">0hrs</span>
+              <!-- daily -->
+              <span class="last-frequency">Previous - 1hr</span>
+              <!-- daily -->
+            </div>
+          </div>
+          <div class="activity__display--weekly" id="display_weekly">
+            <div class="container__frequency">
+              <span class="frequency">4hrs</span>
+              <!-- weekly -->
+              <span class="last-frequency">Previous - 7hrs</span>
+              <!-- weekly -->
+            </div>
+          </div>
+          <div class="activity__display--monthly" id="display_monthly">
+            <div class="container__frequency">
+              <span class="frequency">13hrs</span>
+              <!-- monthly -->
+              <span class="last-frequency">Previous - 19hrs</span>
+              <!-- monthly -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__container green">
+        <img src="images/icon-exercise.svg" alt="icon_exercise" class="icons" />
+        <div class="grid__subcontainer">
+          <div class="container__header--activity">
+            <span class="activity">Exercise</span>
+            <img
+              src="images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="ellisis"
+            />
+          </div>
+          <div class="activity__display--daily" id="display_daily">
+            <div class="container__frequency">
+              <span class="frequency">1hr</span>
+              <!-- daily -->
+              <span class="last-frequency">Previous - 1hr</span>
+              <!-- daily -->
+            </div>
+          </div>
+          <div class="activity__display--weekly" id="display_weekly">
+            <div class="container__frequency">
+              <span class="frequency">4hrs</span>
+              <!-- weekly -->
+              <span class="last-frequency">Previous - 5hrs</span>
+              <!-- weekly -->
+            </div>
+          </div>
+          <div class="activity__display--monthly" id="display_monthly">
+            <div class="container__frequency">
+              <span class="frequency">11hrs</span>
+              <!-- monthly -->
+              <span class="last-frequency">Previous - 18hrs</span>
+              <!-- monthly -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid__container violet">
+        <img src="images/icon-social.svg" alt="icon_social" class="icons" />
+        <div class="grid__subcontainer">
+          <div class="container__header--activity">
+            <span class="activity">Social</span>
+            <img
+              src="images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="ellisis"
+            />
+          </div>
+          <div class="activity__display--daily" id="display_daily">
+            <div class="container__frequency">
+              <span class="frequency">1hr</span>
+              <!-- daily -->
+              <span class="last-frequency">Previous - 3hrs</span>
+              <!-- daily -->
+            </div>
+          </div>
+          <div class="activity__display--weekly" id="display_weekly">
+            <div class="container__frequency">
+              <span class="frequency">5hrs</span>
+              <!-- weekly -->
+              <span class="last-frequency">Previous - 10hrs</span>
+              <!-- weekly -->
+            </div>
+          </div>
+          <div class="activity__display--monthly" id="display_monthly">
+            <div class="container__frequency">
+              <span class="frequency">21hrs</span>
+              <!-- monthly -->
+              <span class="last-frequency">Previous - 23hrs</span>
+              <!-- monthly -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid__container yellow">
+        <img
+          src="images/icon-self-care.svg"
+          alt="icon_self-care"
+          class="icons"
+        />
+        <div class="grid__subcontainer">
+          <div class="container__header--activity">
+            <span class="activity">Self Care</span>
+            <img
+              src="images/icon-ellipsis.svg"
+              alt="ellipsis"
+              class="ellisis"
+            />
+          </div>
+          <div class="activity__display--daily" id="display_daily">
+            <div class="container__frequency">
+              <span class="frequency">0hrs</span>
+              <!-- daily -->
+              <span class="last-frequency">Previous - 1hr</span>
+              <!-- daily -->
+            </div>
+          </div>
+          <div class="activity__display--weekly" id="display_weekly">
+            <div class="container__frequency">
+              <span class="frequency">2hrs</span>
+              <!-- weekly -->
+              <span class="last-frequency">Previous - 2hrs</span>
+              <!-- weekly -->
+            </div>
+          </div>
+          <div class="activity__display--monthly" id="display_monthly">
+            <div class="container__frequency">
+              <span class="frequency">7hrs</span>
+              <!-- monthly -->
+              <span class="last-frequency">Previous - 11hrs</span>
+              <!-- monthly -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
